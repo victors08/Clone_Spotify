@@ -1,4 +1,4 @@
-# Site_leitura
+# Clone_Spotify
 
 Este site está sendo criado para fins de aprendizado e de treino das minhas stacks de programação web, além disso ele fará parte do meu portfolio pessoal de projetos.
 
