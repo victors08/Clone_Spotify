@@ -4,6 +4,11 @@
 
 /*==== Base ====*/
 
+:root {
+    --green-padrao: #1db954;
+    --green-hover: #1ed760;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -22,6 +27,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.logo {
+    height: 40px;
+}
+
 /*=== Barra de navegação ===*/
 
 #navbar {
@@ -29,7 +38,9 @@ body {
     background-color: black;
     color: white;
     justify-content: center;
-    position: static;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #navbar .navbar-container {
@@ -40,44 +51,46 @@ body {
     justify-content: space-between;
 }
 
-#navbar .navbar-container .logo {
-    height: 40px;
-}
-
 #navbar .navbar-container .navbar-itens {
     display: flex;
 }
 
-#navbar .navbar-container .navbar-itens .navbar-iten {
+#navbar .navbar-container .navbar-itens .navbar-item {
     padding: 0 25px;
     margin-top: 1%;
     font-weight: 700;
+    transition: all 250ms ease;
 }
 
-#navbar .navbar-container .navbar-itens .navbar-iten:nth-child(3) {
+#navbar .navbar-container .navbar-itens .navbar-item:hover {
+    color: var(--green-padrao);
+    cursor: pointer;
+}
+
+#navbar .navbar-container .navbar-itens .navbar-item:nth-child(3) {
     border-right: 1px solid white;
 }
 
 /*=== Main/Conteúdo ===*/
 
-#showcase {
+#contents {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1db954;
+    color: var(--green-padrao);
     background: url('/statics/img/young-man-and-woman-listening-to-music-in-headphones.jpg') center center/cover;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: color;
 }
 
-#showcase .showcase-container {
+#contents .contents-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#showcase .showcase-container .showcase-container-title{
+#contents .contents-container .contents-container-title{
     display: flex;     
     width: 74%;
     justify-content: center;
@@ -85,17 +98,17 @@ body {
     text-align: center;
 }
 
-#showcase .showcase-container .showcase-title {
+#contents .contents-container .contents-title {
     font-size: 7.5rem;
     font-weight: 900;
 }
 
-#showcase .showcase-container .showcase-subtitle {
+#contents .contents-container .contents-subtitle {
     font-weight: bold;
     margin: 15px;
 }
 
-#showcase .showcase-container .btn {
+#contents .contents-container .btn {
     font-size: 14px;
     font-weight: bold;
     padding: 14px 34px;
@@ -105,4 +118,110 @@ body {
     text-transform: uppercase;
     background: #1ed760;
     margin-top: 35px;
+    transition: all 250ms ease;
+}
+
+#contents .contents-container .btn:hover {
+    transform:scale(1.1);
+    cursor: pointer;
+}
+
+/*=== Footer ===*/
+
+#footer {
+    background: black;
+    color: white;
+}
+
+#footer .footer-container {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding: 95px 0;
+    justify-content: space-between;
+}
+
+#footer .footer-container .footer-itens {
+    margin: 0 50px;
+}
+
+#footer .footer-container .footer-itens .footer-item {
+    margin: 20px 0;
+    transition: all 250ms ease;
+}
+
+#footer .footer-container .footer-itens .footer-item:hover {
+    color: var(--green-padrao);
+    cursor: pointer;
+}
+
+#footer .footer-container .footer-itens .titulo {
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #919496;
+}
+
+.contatos{
+    margin: 0 50px;
+}
+
+.contatos .icons {
+    margin: 0 20px;
+    font-size: 2rem;
+    transition: all 250ms ease;
+}
+
+.contatos .icons:hover {
+    color: var(--green-padrao);
+    cursor: pointer;
+}
+
+.infos-container {
+    display: flex;
+    justify-content:space-between;
+    width: 85%;
+    margin: auto;
+    padding: 25px 0;
+}
+
+.infos-container .infos-itens {
+    display: flex;
+}
+
+.infos-container .infos-itens .infos-item {
+    margin: 0 10px;
+    color: #919496;
+    font-size: 0.75rem;
+    transition: all 250ms ease;
+}
+
+.infos-container .infos-itens .infos-item:hover {
+    color: var(--green-padrao);
+    cursor: pointer;
+}
+
+.infos-container .direitos {
+    font-size: 15px;
+    color: #919496;
+}
+
+.infos-container .direitos .localidade {
+    display: flex;
+    font-size: 15px;
+    color: #919496;
+    justify-content: flex-end;
+}
+
+.infos-container .direitos .localidade .pais{
+    transition: all 300ms ease;
+}
+
+.infos-container .direitos .localidade .pais:hover {
+    color: var(--green-padrao);
+    cursor: pointer;
+}
+
+.infos-container .direitos .localidade .mundo {
+    margin-right: 8px;
 }
