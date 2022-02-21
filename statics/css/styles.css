@@ -29,6 +29,7 @@ body {
 
 .logo {
     height: 40px;
+    width: auto;
 }
 
 /*=== Barra de navegação ===*/
@@ -41,6 +42,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    padding: 0 58px;
 }
 
 #navbar .navbar-container {
@@ -49,6 +51,7 @@ body {
     height: 80px;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 0;
 }
 
 #navbar .navbar-container .navbar-itens {
@@ -79,7 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--green-padrao);
-    background: url('/statics/img/young-man-and-woman-listening-to-music-in-headphones.jpg') center center/cover;
+    background: url('/statics/img/young-man-and-woman-listening-to-music-in-headphones.jpg') top center/cover;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: color;
 }
@@ -90,17 +93,8 @@ body {
     align-items: center;
 }
 
-#contents .contents-container .contents-container-title{
-    display: flex;     
-    width: 74%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#contents .contents-container .contents-title {
+#contents .contents-container .contents-title{
     font-size: 7.5rem;
-    font-weight: 900;
 }
 
 #contents .contents-container .contents-subtitle {
@@ -114,9 +108,10 @@ body {
     padding: 14px 34px;
     border: none;
     border-radius: 500px;
+    letter-spacing: 1px;
     color: white;
     text-transform: uppercase;
-    background: #1ed760;
+    background: var(--green-hover);
     margin-top: 35px;
     transition: all 250ms ease;
 }
@@ -131,6 +126,7 @@ body {
 #footer {
     background: black;
     color: white;
+
 }
 
 #footer .footer-container {
@@ -139,10 +135,11 @@ body {
     margin: auto;
     padding: 95px 0;
     justify-content: space-between;
+    padding-left: 50px;
 }
 
 #footer .footer-container .footer-itens {
-    margin: 0 50px;
+    margin: 0 40px;
 }
 
 #footer .footer-container .footer-itens .footer-item {
@@ -163,6 +160,7 @@ body {
 }
 
 .contatos{
+    display: flex;
     margin: 0 50px;
 }
 
@@ -183,6 +181,8 @@ body {
     width: 85%;
     margin: auto;
     padding: 25px 0;
+    padding-left: 43px;
+    padding-right: 70px;
 }
 
 .infos-container .infos-itens {
